@@ -1,4 +1,4 @@
-package com.array;
+package main.java.array;
 
 /**
  * Given an array of intervals where intervals[i] = [starti, endi],

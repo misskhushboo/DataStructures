@@ -1,4 +1,4 @@
-package com.array;
+package main.java.array;
 
 /**
  * Given an integer array nums, return an array answer such that:
