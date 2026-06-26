@@ -1,0 +1,34 @@
+package com.assessment;
+class LRUCache {
+
+    Map<Integer,Integer> cacheImpl; 
+    int capacity;
+    public LRUCache(int capacity) {
+        cacheImpl=new LinkedHashMap<>(capacity, 0.75f, true);
+        this.capacity=capacity;
+    }
+    
+    public int get(int key) {
+        return cacheImpl.computeIfAbsent(key, value->{return -1;});
+    }
+    
+    public void put(int key, int value) {
+    
+        cacheImpl.put(key, value);
+        if(cacheImpl.size()>capacity)
+            evictEntry();
+    }
+
+    public void evictEntry(){
+        int eldestkey=cacheImpl.keySet().iterator().next();
+        cacheImpl.remove(eldestkey);
+    }
+}
+
+// Your code will be instantiated and invoked as follows:
+// LRUCache cache = new LRUCache(2);
+// cache.put(1, 1);
+// cache.put(2, 2);
+// cache.get(1);       // returns 1
+// cache.put(3, 3);    // evicts key 2
+// cache.get(2);       // returns -1
