@@ -1,0 +1,7 @@
+/.idea/
+/.idea/libraries/
+/.idea/modules/
+/java/.gradle/
+/java/build/
+/java/gradle/
+/java/.gradle/
