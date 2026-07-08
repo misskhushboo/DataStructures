@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
+ * https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
  * Write a program to determine the length of the longest substring without repeating characters, given a string s.
  * Example 1:
  * Input: s = "xyxyxz"
@@ -22,31 +23,26 @@ import java.util.Set;
 public class LongestSubStringNoRepeatingCharacters {
 
     public static void main(String[] args){
-        new LongestSubStringNoRepeatingCharacters().calculate("xyxyxz");
+        int count=new LongestSubStringNoRepeatingCharacters().lengthOfLongestSubstring(" ");
+        System.out.println("Count="+count);
     }
 
-    private void calculate(String inputStr) {
+    public int lengthOfLongestSubstring(String s) {
 
-        int windowStart=0, maxLength=0;
+        int leftpointer=0, maxLength=0;
         Set<Character> charSet = new HashSet<>();
-       char[] inputCharArray = inputStr.toCharArray();
+        char[] ch = s.toCharArray();
 
-       for(int i=0; i<=inputStr.length(); i++){
+        for(int i=0; i<ch.length; i++){
 
-           windowStart=i;
-           char c= inputCharArray[i];
-           if(charSet.contains(c)){
-               windowStart=i;
-               charSet.clear();
-           }else{
-            charSet.add(c);
-           }
-
-           if(charSet.contains(c)){
-
-           }
-           charSet.add(c);
-       }
+            while(charSet.contains(ch[i])){
+                charSet.remove(ch[leftpointer]);
+                leftpointer++;
+            }
+            charSet.add(ch[i]);
+            maxLength=Math.max(maxLength, i-leftpointer+1);
+        }
+        return maxLength;
     }
 
 }

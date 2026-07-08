@@ -50,7 +50,8 @@ public class ThreeSumProblem {
                     endIndex--;
 
                     //Try this: [-2 -2 0 0 2 2]
-                    //We don't want to include repeated number and call contains(). This step eliminates contains.
+                    //We don't want to include repeated number and call contains().
+                    //This step eliminates contains and duplcates are avoided
                     while(leftIndex<endIndex && nums[leftIndex]==nums[leftIndex-1]) leftIndex++;
                     while(endIndex>leftIndex && nums[endIndex]==nums[endIndex+1]) endIndex--;
                 }
