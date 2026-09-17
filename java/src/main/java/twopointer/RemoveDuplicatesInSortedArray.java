@@ -1,5 +1,6 @@
 package twopointer;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -47,6 +48,7 @@ public class RemoveDuplicatesInSortedArray {
     /**
      * Since it doesn't matter what elements are there after k unique elements, we can just override elements
      * Time = 1 ms. For above code running time is 5 ms. Time is taken in swapping elements which is not needed.
+     * space complexity O(1), no extra array
      * @param nums
      * @return
      */
@@ -63,6 +65,4 @@ public class RemoveDuplicatesInSortedArray {
         }
         return i+1;
     }
-
-
 }
