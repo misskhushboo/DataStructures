@@ -39,3 +39,11 @@ public class IntegerDuplicates {
         }
     }
 }
+//bracket question, search related
+//booking design, lot of hotels, every night 12 pm, give zip file- lot of information
+//how many room we have,
+//data processing, thousands of hotels at the same time sending us details.
+//how to do on managing side - >kafka, load balancing, real time analytics, near real time analytics,
+//create pipeline
+//log streaming design
+//incident management
