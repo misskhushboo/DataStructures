@@ -2,7 +2,7 @@ package slidingwindow;
 
 /**
  * Given an integer array nums, find the subarray with the largest sum, and return its sum.
- * Integrers can be negative and also unsorted array.
+ * Integers can be negative and also unsorted array.
  * If its sorted array, then we can use sliding window as 2sum/3sum problem.
  */
 public class MaximumSubArray_UnsortedArray {
